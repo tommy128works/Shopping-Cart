@@ -1,12 +1,11 @@
-import { useState } from "react";
-import "./App.css";
+import "./App.css"; // need to change to scss file
+import HomePage from "./components/HomePage.tsx";
 
 function App() {
   return (
-    <div>
-      <p>default paragraph</p>
-      <p>default paragraph</p>
-    </div>
+    <>
+      <HomePage name={"string"} />
+    </>
   );
 }
 

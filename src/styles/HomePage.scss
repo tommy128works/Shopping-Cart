@@ -1,0 +1,45 @@
+#home-page {
+  display: flex;
+  padding: 0px 50px 0px;
+  justify-content: space-between;
+
+  div {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .main-text {
+    background-color: rgb(158, 255, 129);
+
+    width: 500px;
+
+  }
+
+
+  .quick-navigation {
+    background-color: rgb(129, 245, 255);
+
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
+@media (max-width: 1000px) {
+  #home-page {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+
+    .main-text{
+      width: min(80vw, 600px);
+    }
+
+    .quick-navigation {
+      width: min(60vw, 450px);
+    }
+
+  }
+}
