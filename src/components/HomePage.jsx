@@ -8,18 +8,19 @@ const HomePage = ({ name }) => {
     <div id="home-page">
       <div className="main-text">
         <h1>Fake Store!</h1>
-        <p>This is a fake store with fake products. <br/> 
-        Purchase items and view your Shopping Cart!</p>
+        <p>
+          This is a fake store with fake products. <br />
+          Purchase items and view your Shopping Cart!
+        </p>
         <p>Enjoy!</p>
 
-        <div className="buttons-container" >
+        <div className="buttons-container">
           <button>GitHub</button>
           <button>API Link</button>
         </div>
-
       </div>
 
-{/* Need to dynamically generate the category links */}
+      {/* Need to dynamically generate the category links */}
 
       <div className="quick-navigation">
         <h3>Quick Navigation</h3>

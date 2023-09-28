@@ -1,0 +1,26 @@
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 5px 10px;
+
+  font-size: xx-large;
+
+  div {
+    display: flex;
+    align-items: center;
+
+  }
+
+}
+
+@media (max-width: 500px) {
+  #nav-bar {
+
+    div {
+      span {
+        display: none;
+      }
+    }
+  }
+}
