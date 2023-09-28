@@ -9,18 +9,20 @@
   div {
     display: flex;
     align-items: center;
-
   }
 
+  a:link,
+  a:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 500px) {
   #nav-bar {
-
-    div {
-      span {
-        display: none;
-      }
+    div > span {
+      display: none;
     }
   }
 }

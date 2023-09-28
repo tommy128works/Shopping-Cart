@@ -5,10 +5,9 @@ import "../styles/ShopPage.scss";
 const ShopPage = () => {
   return (
     <div id="shop-page">
-
       <h1>Shop</h1>
     </div>
-  )
-}
+  );
+};
 
 export default ShopPage;

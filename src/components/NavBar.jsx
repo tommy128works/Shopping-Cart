@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import React from "react";
 import "../styles/NavBar.scss";
@@ -12,13 +13,17 @@ const NavBar = () => {
       <div>
         <img src={menuIcon} />
       </div>
-      <div>
-        <img src={homeIcon} />
-        <span>Fake Store</span>
-      </div>
-      <div>
-        <img src={shoppingCartIcon} />
-      </div>
+      <Link to="/">
+        <div>
+          <img src={homeIcon} />
+          <span>Fake Store</span>
+        </div>
+      </Link>
+      <Link to="/shopping-cart-page">
+        <div>
+          <img src={shoppingCartIcon} />
+        </div>
+      </Link>
     </div>
   );
 };

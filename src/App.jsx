@@ -1,14 +1,16 @@
-import "./App.css"; // need to change to scss file
-import HomePage from "./components/HomePage.jsx";
+import { Outlet } from "react-router-dom";
+
+import "./App.scss";
+
 import NavBar from "./components/NavBar.jsx";
-import ShopPage from "./components/ShopPage.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
     <>
       <NavBar />
-      <HomePage name={"string"} />
-      <ShopPage />
+      <Outlet />
+      <Footer />
     </>
   );
 }
