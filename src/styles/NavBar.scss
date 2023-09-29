@@ -17,6 +17,51 @@
     color: inherit;
     cursor: pointer;
   }
+
+  img {
+    cursor: pointer;
+  }
+}
+
+#side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #aaaaaa;
+  overflow-x: hidden;
+  padding: 0px;
+  transition: 0.5s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  a {
+    font-size: 1.5rem;
+    margin: 15px 0px;
+    padding: 0px 10px;
+    width: 90%;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  a:hover {
+    background-color: #dedede;
+  }
+
+  a:link,
+  a:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  img {
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 500px) {

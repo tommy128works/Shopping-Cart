@@ -25,14 +25,12 @@
     a {
       margin: 0px 20px;
       padding: 10px;
-  
+
       border: 2px solid black;
       border-radius: 10px;
       width: 150px;
     }
   }
-
-
 
   .quick-navigation {
     display: flex;
@@ -48,7 +46,6 @@
       padding: 5px;
       width: 200px;
     }
-
   }
 
   a:link,
@@ -58,10 +55,10 @@
     cursor: pointer;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     line-height: 1;
   }
-
 }
 
 @media (max-width: 1000px) {
@@ -85,6 +82,5 @@
       align-items: center;
       row-gap: 20px;
     }
-
   }
 }
