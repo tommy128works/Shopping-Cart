@@ -9,25 +9,31 @@ const HomePage = ({ name }) => {
       <div className="main-text">
         <h1>Fake Store!</h1>
         <p>
-          This is a fake store with fake products. <br />
-          Purchase items and view your Shopping Cart!
+          This is a fake store with fake products. Purchase items and view your
+          shopping cart!
         </p>
         <p>Enjoy!</p>
 
         <div className="buttons-container">
-          <button>GitHub</button>
-          <button>API Link</button>
+          <a
+            target="_blank"
+            href="https://github.com/tommy128works/Shopping-Cart"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a target="_blank" href="https://fakestoreapi.com/" rel="noreferrer">
+            API Link
+          </a>
         </div>
       </div>
 
-      {/* Need to dynamically generate the category links */}
-
       <div className="quick-navigation">
-        <h3>Quick Navigation</h3>
-        <button>Electronics</button>
-        <button>Jewelery</button>
-        <button>Men's Clothing</button>
-        <button>Women's Clothing</button>
+        <h2>Quick Navigation</h2>
+        <a>Electronics</a>
+        <a>Jewelery</a>
+        <a>Men's Clothing</a>
+        <a>Women's Clothing</a>
       </div>
 
       {/* {name} */}
