@@ -1,0 +1,32 @@
+#categories-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-left: 20px;
+
+
+  --grey: rgb(162, 162, 162);
+
+
+  a {
+    border-radius: 10px;
+    padding: 5px;
+    color: var(--grey);
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+  a:hover {
+    color: black;
+    background-color: var(--grey);
+    transition-duration: 0.2s;
+  }
+
+  a:link,
+  a:visited {
+    text-decoration: inherit;
+    // color: inherit;
+    cursor: pointer;
+  }
+
+}

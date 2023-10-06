@@ -3,13 +3,18 @@ import PropTypes from "prop-types";
 import { React, useEffect, useState } from "react";
 
 import "../styles/ShopPage.scss";
-
-
+import CategoriesMenu from "./CategoriesMenu.jsx";
 
 const getProductData = (category) => {
-  const validCategories = ["electronics", "jewelery", "men's clothing", "women's clothing"];
+  const validCategories = [
+    "all",
+    "electronics",
+    "jewelery",
+    "men's clothing",
+    "women's clothing",
+  ];
 
-  let URLParam = "category/"; 
+  let URLParam = "category/";
 
   if (category === "all") {
     URLParam = "";
@@ -35,8 +40,7 @@ const getProductData = (category) => {
   }, []);
 
   return { productData, error, loading };
-
-}
+};
 
 const ShopPage = () => {
   const { category } = useParams();
@@ -52,6 +56,7 @@ const ShopPage = () => {
     <div id="shop-page">
       <h1>Shop</h1>
       <div>{category}</div>
+      <CategoriesMenu />
     </div>
   );
 };
