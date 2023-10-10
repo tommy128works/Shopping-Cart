@@ -3,7 +3,7 @@ import React from "react";
 
 import "../styles/HomePage.scss";
 
-const HomePage = ({ name }) => {
+const HomePage = () => {
   return (
     <div id="home-page">
       <div className="main-text">
@@ -35,14 +35,10 @@ const HomePage = ({ name }) => {
         <a>Men's Clothing</a>
         <a>Women's Clothing</a>
       </div>
-
-      {/* {name} */}
     </div>
   );
 };
 
-HomePage.propTypes = {
-  name: PropTypes.string,
-};
+HomePage.propTypes = {};
 
 export default HomePage;

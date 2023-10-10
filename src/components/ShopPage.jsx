@@ -6,14 +6,7 @@ import "../styles/ShopPage.scss";
 import CategoriesMenu from "./CategoriesMenu.jsx";
 import ProductGallery from "./ProductGallery.jsx";
 
-const getProductData = (category) => {
-  const validCategories = [
-    "all",
-    "electronics",
-    "jewelery",
-    "men's clothing",
-    "women's clothing",
-  ];
+const getProductData = (category, validCategories) => {
 
   let URLParam = "category/";
 
@@ -40,30 +33,47 @@ const getProductData = (category) => {
       .finally(() => setLoading(false));
   }, []);
 
+  console.log(productData);
+
   return { productData, error, loading };
+};
+
+getProductData.propTypes = {
+  category: PropTypes.string,
+  validCategories: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 const ShopPage = () => {
   const { category } = useParams();
 
-  const { productData, error, loading } = getProductData(category);
+  const validCategories = [
+    "all",
+    "electronics",
+    "jewelery",
+    "men's clothing",
+    "women's clothing",
+  ];
+
+  const { productData, error, loading } = getProductData(category, validCategories);
 
   if (error) return <p>A network error was encountered</p>;
   if (loading) return <p>Loading...</p>;
-
-  console.log(productData);
 
   return (
     <div id="shop-page">
       <h1>Shop</h1>
       <div>{category}</div>
-      <div class="content-container" >
-        <CategoriesMenu />
-        <ProductGallery />
-
+      
+      <div className="content-container" >
+        <CategoriesMenu validCategories={validCategories} />
+        <ProductGallery productData={productData} />
       </div>
     </div>
   );
+};
+
+ShopPage.propTypes = {
+
 };
 
 export default ShopPage;

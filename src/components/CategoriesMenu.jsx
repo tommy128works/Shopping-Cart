@@ -1,21 +1,16 @@
 import { React } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import "../styles/CategoriesMenu.scss";
 
-const CategoriesMenu = () => {
-  const temporaryProps = [
-    "all",
-    "electronics",
-    "jewelery",
-    "men's clothing",
-    "women's clothing",
-  ];
+const CategoriesMenu = ({ validCategories }) => {
+  
 
   return (
     <div id="categories-menu">
       <h2>Categories</h2>
-      {temporaryProps.map((category) => (
+      {validCategories.map((category) => (
         <Link to={"/shop/" + category} key={category}>
           {category}
         </Link>
@@ -24,6 +19,8 @@ const CategoriesMenu = () => {
   );
 };
 
-CategoriesMenu.propTypes = {};
+CategoriesMenu.propTypes = {
+  validCategories: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default CategoriesMenu;
