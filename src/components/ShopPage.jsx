@@ -4,6 +4,7 @@ import { React, useEffect, useState } from "react";
 
 import "../styles/ShopPage.scss";
 import CategoriesMenu from "./CategoriesMenu.jsx";
+import ProductGallery from "./ProductGallery.jsx";
 
 const getProductData = (category) => {
   const validCategories = [
@@ -56,7 +57,11 @@ const ShopPage = () => {
     <div id="shop-page">
       <h1>Shop</h1>
       <div>{category}</div>
-      <CategoriesMenu />
+      <div class="content-container" >
+        <CategoriesMenu />
+        <ProductGallery />
+
+      </div>
     </div>
   );
 };

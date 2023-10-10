@@ -16,7 +16,9 @@ const CategoriesMenu = () => {
     <div id="categories-menu">
       <h2>Categories</h2>
       {temporaryProps.map((category) => (
-        <Link to={"/shop/" + category} key={category} >{category}</Link>
+        <Link to={"/shop/" + category} key={category}>
+          {category}
+        </Link>
       ))}
     </div>
   );
