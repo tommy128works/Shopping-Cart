@@ -5,16 +5,16 @@ import PropTypes from "prop-types";
 import "../styles/CategoriesMenu.scss";
 
 const CategoriesMenu = ({ validCategories }) => {
-  
-
   return (
     <div id="categories-menu">
       <h2>Categories</h2>
-      {validCategories.map((category) => (
-        <Link to={"/shop/" + category} key={category}>
-          {category}
-        </Link>
-      ))}
+      {validCategories.map((category) => {
+        return (
+          <Link to={"/shop/" + category} key={category}>
+            {category}
+          </Link>
+        );
+      })}
     </div>
   );
 };

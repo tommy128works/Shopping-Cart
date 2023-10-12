@@ -7,7 +7,6 @@ import CategoriesMenu from "./CategoriesMenu.jsx";
 import ProductGallery from "./ProductGallery.jsx";
 
 const getProductData = (category, validCategories) => {
-
   let URLParam = "category/";
 
   if (category === "all") {
@@ -33,8 +32,6 @@ const getProductData = (category, validCategories) => {
       .finally(() => setLoading(false));
   }, []);
 
-  console.log(productData);
-
   return { productData, error, loading };
 };
 
@@ -54,7 +51,10 @@ const ShopPage = () => {
     "women's clothing",
   ];
 
-  const { productData, error, loading } = getProductData(category, validCategories);
+  const { productData, error, loading } = getProductData(
+    category,
+    validCategories,
+  );
 
   if (error) return <p>A network error was encountered</p>;
   if (loading) return <p>Loading...</p>;
@@ -63,8 +63,8 @@ const ShopPage = () => {
     <div id="shop-page">
       <h1>Shop</h1>
       <div>{category}</div>
-      
-      <div className="content-container" >
+
+      <div className="content-container">
         <CategoriesMenu validCategories={validCategories} />
         <ProductGallery productData={productData} />
       </div>
@@ -72,8 +72,6 @@ const ShopPage = () => {
   );
 };
 
-ShopPage.propTypes = {
-
-};
+ShopPage.propTypes = {};
 
 export default ShopPage;
