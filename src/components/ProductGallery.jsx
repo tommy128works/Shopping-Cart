@@ -1,5 +1,6 @@
-import { React } from "react";
+import { React, useContext } from "react";
 import PropTypes from "prop-types";
+import { ShopContext } from "../App.jsx";
 
 import "../styles/ProductGallery.scss";
 import starIcon from "../assets/icons/star_rating_icon.svg";
@@ -24,7 +25,7 @@ const createStars = (ratingRate) => {
   return starsList;
 };
 
-const Product = ({ title, imageURL, price, ratingRate, ratingCount }) => {
+const Product = ({ title, imageURL, price, ratingRate, ratingCount, addToCart }) => {
   return (
     <div className="product">
       <img src={imageURL} />
@@ -34,8 +35,7 @@ const Product = ({ title, imageURL, price, ratingRate, ratingCount }) => {
       </div>
       <div className="price">${price.toFixed(2)}</div>
 
-      <button className="add-to-cart-button">
-        {" "}
+      <button className="add-to-cart-button" onClick={() => addToCart(title, price.toFixed(2))} >
         <img src={shoppingCartIcon} /> Add to Cart
       </button>
     </div>
@@ -48,20 +48,25 @@ Product.propTypes = {
   price: PropTypes.number.isRequired,
   ratingRate: PropTypes.number.isRequired,
   ratingCount: PropTypes.number.isRequired,
+  addToCart: PropTypes.func.isRequired,
 };
 
 const ProductGallery = ({ productData }) => {
+  const { cartItems, addToCart } = useContext(ShopContext);
+
+
   return (
     <div className="product-gallery">
       {productData.map((product) => {
         return (
           <Product
+            key={product.id}
             title={product.title}
             imageURL={product.image}
             price={product.price}
             ratingRate={product.rating.rate}
             ratingCount={product.rating.count}
-            key={product.id}
+            addToCart={addToCart}
           />
         );
       })}
