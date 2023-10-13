@@ -62,8 +62,6 @@ const ShopPage = () => {
   return (
     <div id="shop-page">
       <h1>Shop</h1>
-      <div>{category}</div>
-
       <div className="content-container">
         <CategoriesMenu validCategories={validCategories} />
         <ProductGallery productData={productData} />

@@ -16,25 +16,28 @@ const createStars = (ratingRate) => {
   }
 
   if (decimal > 0.75) {
-    starsList.push(<img src={starIcon} key={integer + 1} /> )
+    starsList.push(<img src={starIcon} key={integer + 1} />);
   } else if (decimal > 0.25) {
-    starsList.push(<img src={halfStarIcon} key={integer + 1} />)
+    starsList.push(<img src={halfStarIcon} key={integer + 1} />);
   }
 
   return starsList;
-}
+};
 
 const Product = ({ title, imageURL, price, ratingRate, ratingCount }) => {
   return (
     <div className="product">
       <img src={imageURL} />
-      <div className="title" >{title}</div>
-      <div className="rating-container" >
+      <div className="title">{title}</div>
+      <div className="rating-container">
         {createStars(ratingRate)} {ratingCount}
       </div>
-      <div className="price" >${price.toFixed(2)}</div>
+      <div className="price">${price.toFixed(2)}</div>
 
-      <button className="add-to-cart-button" > <img src={shoppingCartIcon} /> Add to Cart</button>
+      <button className="add-to-cart-button">
+        {" "}
+        <img src={shoppingCartIcon} /> Add to Cart
+      </button>
     </div>
   );
 };

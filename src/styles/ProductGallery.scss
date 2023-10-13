@@ -13,7 +13,6 @@
     row-gap: 5px;
     padding: 5px;
 
-
     width: 300px;
     height: 400px;
 
@@ -24,35 +23,33 @@
     }
 
     .title {
-        font-weight: 600;
+      font-weight: 600;
     }
 
     .rating-container {
-        display: flex;
-        align-items: center;
-        column-gap: 5px;
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
 
-        img {
-            height: 20px;
-            width: auto;
-        }
-
+      img {
+        height: 20px;
+        width: auto;
+      }
     }
 
     .price {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
 
     .add-to-cart-button {
-        display: flex;
-        align-items: center;
-        column-gap: 5px;
-        
-        img {
-            height: 20px;
-            width: auto;
-        }
-    }
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
 
+      img {
+        height: 20px;
+        width: auto;
+      }
+    }
   }
 }

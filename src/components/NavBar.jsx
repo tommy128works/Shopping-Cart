@@ -9,6 +9,7 @@ import shoppingCartIcon from "../assets/icons/shopping_cart_icon.svg";
 
 const NavBar = () => {
   const sideNavRef = useRef(null);
+  const shoppingCartRef = useRef(null);
 
   const openSideNav = () => {
     sideNavRef.current.style.width = "250px";
@@ -18,6 +19,16 @@ const NavBar = () => {
   const closeSideNav = () => {
     sideNavRef.current.style.width = "0";
     sideNavRef.current.style.padding = "0px";
+  };
+
+  const openShoppingCart = () => {
+    shoppingCartRef.current.style.width = "250px";
+    shoppingCartRef.current.style.padding = "5px 10px";
+  };
+
+  const closeShoppingCart = () => {
+    shoppingCartRef.current.style.width = "0px";
+    shoppingCartRef.current.style.padding = "0px";
   };
 
   return (
@@ -32,11 +43,9 @@ const NavBar = () => {
             <span>Fake Store</span>
           </div>
         </Link>
-        <Link to="/shopping-cart-page">
-          <div>
-            <img src={shoppingCartIcon} />
-          </div>
-        </Link>
+        <div>
+          <img src={shoppingCartIcon} onClick={() => openShoppingCart()} />
+        </div>
       </div>
       <div id="side-nav" ref={sideNavRef}>
         <img src={menuIcon} onClick={() => closeSideNav()} />
@@ -56,6 +65,12 @@ const NavBar = () => {
         <a target="_blank" href="https://fakestoreapi.com/" rel="noreferrer">
           API Link
         </a>
+      </div>
+      <div id="shopping-cart" ref={shoppingCartRef}>
+        <img src={shoppingCartIcon} onClick={() => closeShoppingCart()} />
+        
+        hello this is the shopping cart
+
       </div>
     </>
   );

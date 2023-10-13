@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../styles/HomePage.scss";
 
@@ -30,10 +31,11 @@ const HomePage = () => {
 
       <div className="quick-navigation">
         <h2>Quick Navigation</h2>
-        <a>Electronics</a>
-        <a>Jewelery</a>
-        <a>Men's Clothing</a>
-        <a>Women's Clothing</a>
+        <Link to="shop/all">All</Link>
+        <Link to="shop/electronics">Electronics</Link>
+        <Link to="shop/jewelery">Jewelery</Link>
+        <Link to="shop/men's clothing">Men's Clothing</Link>
+        <Link to="shop/women's clothing">Women's Clothing</Link>
       </div>
     </div>
   );
