@@ -49,12 +49,12 @@ const NavBar = () => {
       </div>
       <div id="side-nav" ref={sideNavRef}>
         <img src={menuIcon} onClick={() => closeSideNav()} />
-        {/* This needs to be Links from React Router */}
-        <a>Home Page</a>
-        <a href="">Electronics</a>
-        <a href="">Jewelry</a>
-        <a href="">Men's Clothing</a>
-        <a href="">Women's Clothing</a>
+        <Link to="/" onClick={() => closeSideNav()} >Home</Link>
+        <Link to="/shop/electronics" onClick={() => closeSideNav()} >Electronics</Link>
+        <Link to="/shop/jewelery" onClick={() => closeSideNav()} >Jewelery</Link>
+        <Link to="/shop/men's clothing" onClick={() => closeSideNav()} >Men's Clothing</Link>
+        <Link to="/shop/women's clothing" onClick={() => closeSideNav()} >Women's Clothing</Link>
+
         <a
           target="_blank"
           href="https://github.com/tommy128works/Shopping-Cart"

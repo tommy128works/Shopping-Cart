@@ -30,7 +30,7 @@ const getProductData = (category, validCategories) => {
       .then((response) => setProductData(response))
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
-  }, []);
+  }, [category]);
 
   return { productData, error, loading };
 };

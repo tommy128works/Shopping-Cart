@@ -51,8 +51,6 @@ Product.propTypes = {
 };
 
 const ProductGallery = ({ productData }) => {
-  console.log(productData);
-
   return (
     <div className="product-gallery">
       {productData.map((product) => {
