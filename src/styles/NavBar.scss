@@ -64,23 +64,6 @@
   }
 }
 
-#shopping-cart {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: #aaaaaa;
-  overflow-x: hidden;
-  padding: 0px;
-  transition: 0.5s;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
 @media (max-width: 500px) {
   #nav-bar {
     div > span {

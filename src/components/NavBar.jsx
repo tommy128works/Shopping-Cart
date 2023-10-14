@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { React, useRef, useContext } from "react";
-import { ShopContext } from "../App.jsx";
+import { React, useRef } from "react";
 
 import "../styles/NavBar.scss";
 import menuIcon from "../assets/icons/menu_icon.svg";
@@ -10,7 +9,6 @@ import shoppingCartIcon from "../assets/icons/shopping_cart_icon.svg";
 
 const NavBar = () => {
   const sideNavRef = useRef(null);
-  const shoppingCartRef = useRef(null);
 
   const openSideNav = () => {
     sideNavRef.current.style.width = "250px";
@@ -21,19 +19,6 @@ const NavBar = () => {
     sideNavRef.current.style.width = "0";
     sideNavRef.current.style.padding = "0px";
   };
-
-  const openShoppingCart = () => {
-    shoppingCartRef.current.style.width = "250px";
-    shoppingCartRef.current.style.padding = "5px 10px";
-  };
-
-  const closeShoppingCart = () => {
-    shoppingCartRef.current.style.width = "0px";
-    shoppingCartRef.current.style.padding = "0px";
-  };
-
-  const { cartItems, addToCart, removeFromCart } = useContext(ShopContext);
-
 
   return (
     <>
@@ -47,9 +32,11 @@ const NavBar = () => {
             <span>Fake Store</span>
           </div>
         </Link>
-        <div>
-          <img src={shoppingCartIcon} onClick={() => openShoppingCart()} />
-        </div>
+        <Link to="/shopping-cart">
+          <div>
+            <img src={shoppingCartIcon} />
+          </div>
+        </Link>
       </div>
       <div id="side-nav" ref={sideNavRef}>
         <img src={menuIcon} onClick={() => closeSideNav()} />
@@ -79,11 +66,6 @@ const NavBar = () => {
         <a target="_blank" href="https://fakestoreapi.com/" rel="noreferrer">
           API Link
         </a>
-      </div>
-      <div id="shopping-cart" ref={shoppingCartRef}>
-        <img src={shoppingCartIcon} onClick={() => closeShoppingCart()} />
-        hello this is the shopping cart
-        { cartItems }
       </div>
     </>
   );

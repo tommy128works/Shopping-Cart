@@ -25,7 +25,14 @@ const createStars = (ratingRate) => {
   return starsList;
 };
 
-const Product = ({ title, imageURL, price, ratingRate, ratingCount, addToCart }) => {
+const Product = ({
+  title,
+  imageURL,
+  price,
+  ratingRate,
+  ratingCount,
+  addToCart,
+}) => {
   return (
     <div className="product">
       <img src={imageURL} />
@@ -35,7 +42,10 @@ const Product = ({ title, imageURL, price, ratingRate, ratingCount, addToCart })
       </div>
       <div className="price">${price.toFixed(2)}</div>
 
-      <button className="add-to-cart-button" onClick={() => addToCart(title, price.toFixed(2))} >
+      <button
+        className="add-to-cart-button"
+        onClick={() => addToCart(title, price.toFixed(2))}
+      >
         <img src={shoppingCartIcon} /> Add to Cart
       </button>
     </div>
@@ -54,6 +64,7 @@ Product.propTypes = {
 const ProductGallery = ({ productData }) => {
   const { cartItems, addToCart } = useContext(ShopContext);
 
+  console.log(cartItems);
 
   return (
     <div className="product-gallery">

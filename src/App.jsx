@@ -23,16 +23,14 @@ function App() {
       setCartItems(tempCartItems);
     } else {
       let tempCartItems = cartItems;
-      tempCartItems.push({ title: title, count: 1, price: price});
+      tempCartItems.push({ title: title, count: 1, price: price });
       setCartItems(tempCartItems);
     }
 
     console.log(cartItems);
   };
 
-  const removeFromCart = () => {
-
-  };
+  const removeFromCart = () => {};
 
   return (
     <>
