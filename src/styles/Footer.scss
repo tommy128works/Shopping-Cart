@@ -1,0 +1,23 @@
+#footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    img {
+        height: 20px;
+        width: auto;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+    }
+
+    a:link,
+    a:visited {
+      text-decoration: inherit;
+      color: inherit;
+      cursor: pointer;
+    }
+}

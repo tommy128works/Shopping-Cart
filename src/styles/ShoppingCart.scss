@@ -1,120 +1,116 @@
 #shopping-cart {
+  h1 {
+    margin-left: 20px;
+  }
 
-    h1 {
-        margin-left: 20px;
-    }
+  .cart-container {
+    margin: 0 20vw;
 
-    .cart-container {
-        margin: 0 20vw;
+    font-size: 1.5rem;
 
-        .cart-item {
-            display: flex;
-            margin: 30px 0;
-            
-    
-            .img-container {
-                flex: 1;
-    
-                display: flex;
-                justify-content: center;
-            }
-            
-            img {
-                width: 200px;
-                height: 200px;
-                object-fit: contain;
-            }
-    
-            .item-details {
-                flex: 2;
-    
-                .first-row {
-                    display: flex;
-    
-                    div {
-                        flex: 1;
-                    }
-    
-                    img {
-                        width: auto;
-                        height: 30px;
-                    }
-                }
-    
-                .second-row {
-                    display: flex;
-    
-                    div {
-                        flex: 1;
-                        
-                    }
-    
-                    img {
-                        width: auto;
-                        height: 30px;
-                    }
-    
-                    .item-quantity-container {
-                        display: flex;
-                        text-align: center;
-    
-                        div {
-                            flex: 1;
-                        }
-                    }
-    
-                }
-            }
-        }
-    
+    .cart-item {
+      display: flex;
+      margin: 30px 0;
 
-    }
+      .img-container {
+        flex: 1;
 
-    .check-out-container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 20px;
+        justify-content: center;
+      }
 
-        font-weight: 600;
-        font-size: 2rem;
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+      }
 
-        button {
-            font-size: inherit;
-            font-weight: inherit;
-            background-color: white;
-            border-radius: 20px;
-            border: 5px solid black;
-            padding: 10px;
+      .item-details {
+        flex: 2;
+
+        .first-row {
+          display: flex;
+
+          div {
+            flex: 1;
+          }
+
+          img {
+            width: auto;
+            height: 30px;
+            cursor: pointer;
+          }
         }
-    }
 
-    
+        .second-row {
+          display: flex;
+
+          div {
+            flex: 1;
+          }
+
+          img {
+            width: auto;
+            height: 30px;
+            cursor: pointer;
+          }
+
+          .item-quantity-container {
+            display: flex;
+            text-align: center;
+
+            div {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .check-out-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+
+    font-weight: 600;
+    font-size: 2rem;
+
+    button {
+      font-size: inherit;
+      font-weight: inherit;
+      background-color: white;
+      border-radius: 20px;
+      border: 5px solid black;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
-    #shopping-cart {
-
-        .cart-container {
-            
-        }
+  #shopping-cart {
+    .cart-container {
+      font-size: 1.25rem;
     }
+  }
 }
 
 @media (max-width: 600px) {
-    #shopping-cart {
+  #shopping-cart {
+    .cart-container {
+      margin: 0;
 
-        .cart-container {
-            margin: 0;
+      font-size: 1.1rem;
 
-            .cart-item {
-
-                img {
-                    width: 100px;
-                    height: 100px;
-                    object-fit: contain;
-                }
-            }
+      .cart-item {
+        img {
+          width: 100px;
+          height: 100px;
+          object-fit: contain;
         }
+      }
     }
+  }
 }
