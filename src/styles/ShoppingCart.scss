@@ -1,0 +1,120 @@
+#shopping-cart {
+
+    h1 {
+        margin-left: 20px;
+    }
+
+    .cart-container {
+        margin: 0 20vw;
+
+        .cart-item {
+            display: flex;
+            margin: 30px 0;
+            
+    
+            .img-container {
+                flex: 1;
+    
+                display: flex;
+                justify-content: center;
+            }
+            
+            img {
+                width: 200px;
+                height: 200px;
+                object-fit: contain;
+            }
+    
+            .item-details {
+                flex: 2;
+    
+                .first-row {
+                    display: flex;
+    
+                    div {
+                        flex: 1;
+                    }
+    
+                    img {
+                        width: auto;
+                        height: 30px;
+                    }
+                }
+    
+                .second-row {
+                    display: flex;
+    
+                    div {
+                        flex: 1;
+                        
+                    }
+    
+                    img {
+                        width: auto;
+                        height: 30px;
+                    }
+    
+                    .item-quantity-container {
+                        display: flex;
+                        text-align: center;
+    
+                        div {
+                            flex: 1;
+                        }
+                    }
+    
+                }
+            }
+        }
+    
+
+    }
+
+    .check-out-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+
+        font-weight: 600;
+        font-size: 2rem;
+
+        button {
+            font-size: inherit;
+            font-weight: inherit;
+            background-color: white;
+            border-radius: 20px;
+            border: 5px solid black;
+            padding: 10px;
+        }
+    }
+
+    
+}
+
+@media (max-width: 1200px) {
+    #shopping-cart {
+
+        .cart-container {
+            
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #shopping-cart {
+
+        .cart-container {
+            margin: 0;
+
+            .cart-item {
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

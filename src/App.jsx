@@ -9,13 +9,14 @@ import Footer from "./components/Footer.jsx";
 export const ShopContext = createContext({
   cartItems: [],
   addToCart: () => {},
-  removeFromCart: () => {},
+  subtractFromCart: () => {},
+  deleteFromCart: () => {},
 });
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (title, price) => {
+  const addToCart = (title, price, imageURL) => {
     const itemIndex = cartItems.findIndex((product) => product.title === title);
     if (itemIndex > -1) {
       let tempCartItems = cartItems;
@@ -23,18 +24,27 @@ function App() {
       setCartItems(tempCartItems);
     } else {
       let tempCartItems = cartItems;
-      tempCartItems.push({ title: title, count: 1, price: price });
+      tempCartItems.push({
+        title: title,
+        count: 1,
+        price: price,
+        imageURL: imageURL,
+      });
       setCartItems(tempCartItems);
     }
 
     console.log(cartItems);
   };
 
-  const removeFromCart = () => {};
+  const subtractFromCart = () => {};
+
+  const deleteFromCart = () => {};
 
   return (
     <>
-      <ShopContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+      <ShopContext.Provider
+        value={{ cartItems, addToCart, subtractFromCart, deleteFromCart }}
+      >
         <NavBar />
         <Outlet />
         <Footer />

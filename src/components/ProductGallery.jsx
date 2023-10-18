@@ -44,7 +44,7 @@ const Product = ({
 
       <button
         className="add-to-cart-button"
-        onClick={() => addToCart(title, price.toFixed(2))}
+        onClick={() => addToCart(title, parseFloat(price.toFixed(2)), imageURL)}
       >
         <img src={shoppingCartIcon} /> Add to Cart
       </button>
